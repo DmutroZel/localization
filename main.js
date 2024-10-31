@@ -143,18 +143,18 @@ function changeLanguage() {
 }
 changeLanguage();
 
-// Отримуємо поточну тему з localStorage або встановлюємо за замовчуванням 'light'
+
 let currentTheme = localStorage.getItem('theme') || 'light';
 const wrapElement = document.querySelector('.wrap');
 wrapElement.className = 'wrap ' + currentTheme + '-theme';
 
 document.getElementById('theme-toggle').onclick = function () {
-    // Перемикаємо між темною і світлою темою
+    
     currentTheme = (currentTheme === 'light') ? 'dark' : 'light';
     
-    // Застосовуємо відповідний клас до елемента wrap
+   
     wrapElement.className = 'wrap ' + currentTheme + '-theme';
     
-    // Зберігаємо вибрану тему в localStorage
+   
     localStorage.setItem('theme', currentTheme);
 };
